@@ -147,7 +147,7 @@ class App extends Component {
 
   onDelete = (id) =>{
     let {tasks} = this.state;
-    let index = findIndex(id);
+    let index = this.findIndex(id);
     tasks.splice(index, 1);
     this.setState({
       tasks : tasks
