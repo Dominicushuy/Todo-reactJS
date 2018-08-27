@@ -31,7 +31,7 @@ class App extends Component {
   }
 
   generateID = ()=>{
-    return s4() + s4() + '-' + s4() + s4() + '-' +s4()
+    return this.s4() + this.s4() + '-' + this.s4() + this.s4() + '-' + this.s4()
   }
 
   onGetData = () =>{
