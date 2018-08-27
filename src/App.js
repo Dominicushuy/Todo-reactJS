@@ -18,6 +18,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
+      tasks : [],
       taskEdit : [],
       searchValue : "",
       sortStatus : 0,
@@ -36,6 +37,9 @@ class App extends Component {
 
   onGetData = () =>{
     let { data } = this.props;
+    this.setState({
+      tasks:data
+    })
     this.props.onGetData(data);
   }
 
@@ -180,9 +184,8 @@ class App extends Component {
   }
 
   render() {
-    let {taskEdit , searchValue , sortLabel , sortStatus ,sortPriority, sortValue } = this.state;
+    let {tasks, taskEdit , searchValue , sortLabel , sortStatus ,sortPriority, sortValue } = this.state;
     // Search
-    let { tasks } = this.props;
 
     if(searchValue){
       tasks = tasks.filter((task) =>{
