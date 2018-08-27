@@ -17,6 +17,7 @@ export default class FilterLabel extends Component {
   }
 
   render() {
+    let { labelName } = this.state
     return (
     <div className="filter filter--label">
         <ul className="list-unstyled text-left">Nhãn
